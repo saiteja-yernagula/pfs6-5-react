@@ -1,0 +1,150 @@
+React 
+react is a open source javascript library used to build responsive
+single page applications
+
+Features
+1. component based architecture
+   Navbar Header Card Details Payment Cart
+2. Virtual Dom
+   It is a copy of real dom
+   it will compare the changes with the copy and reflec the changes
+   this entire process is called reconcialation  using diffing algorithm
+3. Single Page Application
+   it contains only one index.html file
+
+
+check the versions 
+node -v
+npm -v
+
+2. powershell  with run as administrator
+  
+ Get-ExecutionPolicy
+ Set-ExecutionPolicy RemoteSigned
+ Y 
+
+3. check es7+ react extension
+
+
+
+create new folder
+
+2. ctrl `
+
+3. npm create vite@latest doctorsapp
+   framework- react
+   variant -javascript
+   eslint
+   y
+
+4. 
+ctrl c
+cd doctorsapp
+npm install
+npm run dev
+
+index.html-----main.jsx---App.jsx-----components 
+               
+
+jsx - javascript xml
+jsx rules
+it must have one parent
+className
+camelCase
+tag must be closed
+{} can be written
+terinary operator
+<></> 
+style={{ backgroundColor: 'skyblue', padding: '10px' }}
+component must have a capital letter at starting
+
+
+component
+it renders the part of UI that can be reusable
+class components - life cycle methods
+functional componets - Hooks
+
+
+cards
+
+props
+props is a immutable objects
+it is used to pass the data from parent to child
+
+destructuring
+it is a process of extracting values
+from object and array and assiging it 
+to varaiables
+
+let obj={
+   name:'john',
+   city:'vizag'
+
+}
+let {name,city}=obj
+console.log(city)
+
+
+in react 
+webpage will not rerender when the variable changes
+it will only rerender whenever the state changes
+
+state
+it is also like a variable which stores the dynamic data related to the component
+
+Hooks - built in functions
+1) useState
+it is used to manage the state values
+
+syntax
+import {useState} from 'react';
+
+let [state,setState]=useState(intitialvalue)
+
+state- it is state variable name
+setState- it is used to update the state value
+useState- hook 
+initialvalue - "" or [] or {} or data
+
+let [val,setVal]=useState('hello')
+
+setVal('hi')
+setVal('hello world')
+
+{val}
+
+
+form handling in react
+1) uncontrooled form handling - useRef
+2) controlled form handling -it is controlled by react using e.target.value
+
+
+
+useEffect
+it is used to manage the side effects such as api calling,localstorage and timers
+1) useEffect with no dependency - it will run whenever the state changes
+2) useEffect with [] dependency array- it will run only one time
+3) useEffect with dependency value - it will run one time  and rerun when the dependency changes
+
+import {useEffect} from 'react';
+
+useEffect(()=>{
+   console.log('api logic')
+})
+
+useEffect(()=>{
+   console.log('api logic')
+},[])
+
+
+useEffect(()=>{
+   console.log('api logi')
+},[val])
+
+
+how to render a list 
+using map we can reder list
+
+key
+key is used to identify the item unique for updation and deletion
+
