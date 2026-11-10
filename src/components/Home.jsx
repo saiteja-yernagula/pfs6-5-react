@@ -70,7 +70,7 @@ function Home({newdoctor}) {
 
         {filtereddoctors.length>0 ?(
         <div className='doctorcontainer'>
-          {filtereddoctors.map((doctor)=><Doctorcard key={doctor.id} name={doctor.name} specialization={doctor.specialization} gender={doctor.gender} />)}
+          {filtereddoctors.map((doctor)=><Doctorcard id={doctor.id} key={doctor.id} name={doctor.name} specialization={doctor.specialization} gender={doctor.gender} />)}
         </div>):<h1>doctors not found</h1>}
     </div>
   )

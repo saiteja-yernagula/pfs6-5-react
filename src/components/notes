@@ -148,3 +148,69 @@ using map we can reder list
 key
 key is used to identify the item unique for updation and deletion
 
+
+
+routing 
+react router dom
+it is library that is used to integrate routing 
+
+
+static routing
+1) npm install react-router-dom
+
+2) integrate in main.jsx
+
+import {BrowserRouter} from 'react-router-dom'
+
+<BrowserRouter>
+<App/>
+</BrowserRouter>
+
+
+3) rules -routes---App.jsx
+import Home from 'Home'
+import About from 'About'
+import Services from 'Services'
+import {Router,Route} from 'react-router-dom'
+
+<Router>
+<Route path='/' element={<Home/>} />
+<Route path='/about' element={<About/>}/>
+<Route path='/services' element={<Services/>}/>
+</Router>
+
+4) useNavigate - button
+import {useNavigate} from 'react-router-dom'
+
+let navigate=useNavigate()
+
+<button onClick={()=>navigate('/')}>Home</button>
+<button onClick={()=>navigate('/about')}>About</button>
+
+dynamic routing
+
+
+1) Routes in App.jsx
+
+
+import Details from 'Details';
+
+<Routes>
+ <Route path='/details/:id' element={<Details/>}/>
+</Routes>
+
+
+2) useNavigate -button
+let navigate=useNavigate()
+<card>
+ <button onClick={()=>navigate(`/details/${id}`)}> view details</button>
+</card>
+
+
+3) useParams 
+it is used to get the dynamic data from url
+
+import {useParams} from 'react-router-dom'
+
+let {id}=useParams()
+
