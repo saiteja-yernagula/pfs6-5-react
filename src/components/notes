@@ -180,6 +180,7 @@ import {Router,Route} from 'react-router-dom'
 </Router>
 
 4) useNavigate - button
+it is used for programatical routing
 import {useNavigate} from 'react-router-dom'
 
 let navigate=useNavigate()
@@ -213,4 +214,35 @@ it is used to get the dynamic data from url
 import {useParams} from 'react-router-dom'
 
 let {id}=useParams()
+
+
+
+api calling
+1) using fetch
+
+await fetch(url)
+await data.json()
+
+
+2) using axios
+1) 
+npm install axios
+
+2)
+import axios from 'axios';
+import {useEffect,useState} from 'react'
+
+let [doctors,setDoctors]=useState([])
+useEffect(()=>{
+fetchdata()
+},[])
+
+async function fetchdata(){
+   let response=await axios.get('https://doctorapibackend.onrender.com/doctors')
+   console.log(response.data)
+   setDoctors(response.data)
+}
+
+
+using map
 
