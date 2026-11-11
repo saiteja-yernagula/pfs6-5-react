@@ -9,6 +9,7 @@ import { useEffect } from 'react'
 
 import { Routes,Route } from 'react-router-dom'
 import Doctordetails from './components/Doctordetails'
+import Weather from './components/Weather'
 function App() {
   // let [count,setCount]=useState(0)
   // let [val,setVal]=useState(0)
@@ -36,6 +37,7 @@ function App() {
         <Route path='/adddoctor' element={<Addnewdoctor/>}/>
 
         <Route path='/doctordetails/:id' element={<Doctordetails/>}></Route>
+        <Route path='/weather' element={<Weather/>}/>
       </Routes>
       {/* <Section/>
       <div className='doctorcontainer'>

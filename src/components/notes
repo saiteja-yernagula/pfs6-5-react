@@ -228,7 +228,7 @@ await data.json()
 1) 
 npm install axios
 
-2)
+2)-Home.jsx
 import axios from 'axios';
 import {useEffect,useState} from 'react'
 
